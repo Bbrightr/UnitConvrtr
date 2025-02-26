@@ -25,9 +25,10 @@ p {
 
 .container {
     background: #F4F4F4;
-    width: 550px;
+    width: 650px;
     margin: 0 auto;
     padding-bottom: 25px;
+    border-radius: 10px;
 }
 
 .topSide{
@@ -59,7 +60,17 @@ p {
     height: 42px;
     font-weight: 500;
     color: #3d3d3d;
+    box-shadow: 0 1px 2px #1C1C1C;
+}
 
+#convert-btn:hover{
+    background: #e9e4fe
+}
+
+#convert-btn:active{
+    background: #e9e4fe;
+    box-shadow: none;
+    border: none;
 }
 
 .conv-dimen {
@@ -70,5 +81,10 @@ p {
     border-radius: 4.68px;
     color: #353535;
     
+}
+
+.bottomSide{
+    /* margin: 25px 25px; */
+    margin-top: 40px;
 }
 
