@@ -9,31 +9,23 @@ const massP = document.getElementById("massConvert")
 const volumeP = document.getElementById("volumeConvert")
 const lengthP = document.getElementById("lengthConvert")
 
-let numberEntered = document.getElementById("converted-value").value
+let numberEntered = document.getElementById("converted-value")
 
-
+const metersToFeet = 3.281
+const litersToGallons = 0.264
+const kilogramToPound = 2.204
 
 function convertbtn(){
-    meetersToFeet = numberEntered.value * 3.281
-    feetToMeters = numberEntered.value/3.281
 
-    litersToGallons = numberEntered.value/0.264
-    gallonsToLiters = numberEntered.value*3.785
+    let inputValue = numberEntered.value
 
-    kilogramToPound = numberEntered.value*2.204
-    poundToKilogram = numberEntered.value/2.204
+    lengthP.textContent = `${inputValue} meters = ${(inputValue / metersToFeet)} feet | 
+                            ${inputValue} feet = ${(metersToFeet * inputValue)} meters`
 
+    volumeP.textContent = `${inputValue} liters = ${(inputValue / litersToGallons)} gallons | 
+                            ${inputValue} gallons = ${(litersToGallons * inputValue)} liters`;
 
-    if (numberToCovert){
+    massP.textContent = `${inputValue} kilos = ${(kilogramToPound * inputValue)} pounds | 
+                            ${inputValue} pounds = ${(inputValue / kilogramToPound)} kilos`
 
-        lengthP.innerHTML = `<p> ${numberEntered.value} meters = ${meetersToFeet} feet | 
-                            ${numberEntered.value} feet = ${feetToMeters} meters</p>`
-
-
-        volumeP.innerHTML = `<p> ${numberEntered.value} liters = ${litersToGallons} gallons | 
-                            ${numberEntered.value} gallons = ${gallonsToLiters} liters</p>`
-
-        massP.innerHTML = `<p> ${numberEntered.value} kilos = ${kilogramToPound} pounds | 
-                            ${numberEntered.value} pounds = ${poundToKilogram} kilos</p>`
-    }
 }
