@@ -18,14 +18,20 @@ const kilogramToPound = 2.204
 function convertbtn(){
 
     let inputValue = numberEntered.value
+    me_Fee = (inputValue / metersToFeet).toFixed(3)
+    fee_Me = (metersToFeet * inputValue).toFixed(3)
+    lit_Gal = (inputValue / litersToGallons).toFixed(3)
+    gal_lit = (litersToGallons * inputValue).toFixed(3)
+    kil_Pnd = (kilogramToPound * inputValue).toFixed(3)
+    pnd_Kil = (inputValue / kilogramToPound).toFixed(3)
 
-    lengthP.textContent = `${inputValue} meters = ${(inputValue / metersToFeet)} feet | 
-                            ${inputValue} feet = ${(metersToFeet * inputValue)} meters`
+    lengthP.textContent = `${inputValue} meters = ${me_Fee} feet | 
+                            ${inputValue} feet = ${fee_Me} meters`
 
-    volumeP.textContent = `${inputValue} liters = ${(inputValue / litersToGallons)} gallons | 
-                            ${inputValue} gallons = ${(litersToGallons * inputValue)} liters`;
+    volumeP.textContent = `${inputValue} liters = ${lit_Gal} gallons | 
+                            ${inputValue} gallons = ${gal_lit} liters`;
 
-    massP.textContent = `${inputValue} kilos = ${(kilogramToPound * inputValue)} pounds | 
-                            ${inputValue} pounds = ${(inputValue / kilogramToPound)} kilos`
+    massP.textContent = `${inputValue} kilos = ${kil_Pnd} pounds | 
+                            ${inputValue} pounds = ${pnd_Kil} kilos`
 
 }
