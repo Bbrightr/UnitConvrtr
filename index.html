@@ -15,23 +15,24 @@
         <div class="container">
             <div class="topSide">
                 <h1>Metric/Imperial Unit Conversion</h1>
-                <div class="converted" id="converted-value">0</div>
-                <button id="convert-btn">Convert</button>
+                <div><input class="converted" id="converted-value" type="number" placeholder="0" style="text-align: center;"></div>
+                <!-- <div class="converted" id="converted-value">0</div> -->
+                <button id="convert-btn" onclick="convertbtn()">Convert</button>
             </div>
 
             <div class="bottomSide">
                 <div class="length-Con conv-dimen">
                     <h2>Length (Meter/Feet)</h2>
-                    <p> | </p>
+                    <p id="lengthConvert"> | </p>
 
                 </div>
                 <div class="vol-Con conv-dimen">
                     <h2>Volume (Liters/Gallons)</h2>
-                    <p> | </p>
+                    <p id="volumeConvert"> | </p>
                 </div>
                 <div class="mass-Con conv-dimen">
                     <h2>Mass (Kilograms/Pounds)</h2>
-                    <p> | </p>
+                    <p id="massConvert"> | </p>
                 </div>
             </div>
         </div>

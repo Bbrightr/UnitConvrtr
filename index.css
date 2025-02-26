@@ -37,7 +37,7 @@ p {
 }
 
 .converted {
-    width: 117px;
+    width: 100px;
     /* height: 83px; */
     border: 2px solid #B295FF;
     border-radius: 5PX;
@@ -48,7 +48,18 @@ p {
     font-weight: 900;
     justify-content: center;
     align-items: baseline;
-    padding: 12px 0 12px 0;
+    padding: 12px 10px 12px 10px;
+    background: none;
+    /* position: relative; */
+}
+
+input[type='number']::-webkit-inner-spin-button, 
+input[type='number']::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    margin: 0;
+    color: #fff;
+    /* text-align: center; */
+    /* position: absolute; */
 }
 
 #convert-btn{
