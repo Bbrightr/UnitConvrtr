@@ -6,26 +6,24 @@
         <title></title>
         <meta name="description" content="">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="index.css">
     </head>
-    <body id="bodyContainer">
-        <div class="container">
+    <body id="bodyContainer" >
+        <div class="container" id="darkBC">
             <div class="topSide">
-                <label class="switch">
-                    <input type="checkbox" id="toggle-dark">
-                    <span class="slider"></span>
-                </label>
+                <button class="switchBtn" id="dark-mode-btn">Dark Mode</button>
+               
 
                 <h1>Metric/Imperial Unit Conversion</h1>
                 <div><input class="converted" id="converted-value" type="number" placeholder="0" style="text-align: center;"></div>
-                <!-- <div class="converted" id="converted-value">0</div> -->
+                
                 <button id="convert-btn" onclick="convertbtn()">Convert</button>
             </div>
 
-            <div class="bottomSide">
+            <div class="bottomSide" >
                 <div class="length-Con conv-dimen">
                     <h2>Length (Meter/Feet)</h2>
                     <p id="lengthConvert"> | </p>

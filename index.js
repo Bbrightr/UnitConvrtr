@@ -8,8 +8,10 @@
 const massP = document.getElementById("massConvert")
 const volumeP = document.getElementById("volumeConvert")
 const lengthP = document.getElementById("lengthConvert")
-const toggleDark = document.getElementById("toggle-dark")
-const toggleLight = document.getElementById("toggle-light")
+const toggleDark = document.getElementById("dark-mode-btn")
+const darkBackground = document.getElementById("darkBC")
+const convertedBackground = document.getElementsByClassName("conv-dimen")
+// const toggleLight = document.getElementById("toggle-light")
 
 let numberEntered = document.getElementById("converted-value")
 
@@ -39,73 +41,15 @@ function convertbtn(){
 }
 
 toggleDark.addEventListener("click", function(){
-    bodyContainer.innerHTML=`
-     <body id="bodyContainer">
-        <div class="container dark-mode">
-            <div class="topSide">
-                <label class="switch">
-                    <input type="checkbox" id="toggle-light">
-                    <span class="slider"></span>
-                </label>
-
-                <h1>Metric/Imperial Unit Conversion</h1>
-                <div><input class="converted" id="converted-value" type="number" placeholder="0" style="text-align: center;"></div>
-                <!-- <div class="converted" id="converted-value">0</div> -->
-                <button id="convert-btn" onclick="convertbtn()">Convert</button>
-            </div>
-
-            <div class="bottomSide">
-                <div class="length-Con conv-dimen">
-                    <h2>Length (Meter/Feet)</h2>
-                    <p id="lengthConvert"> | </p>
-
-                </div>
-                <div class="vol-Con conv-dimen">
-                    <h2>Volume (Liters/Gallons)</h2>
-                    <p id="volumeConvert"> | </p>
-                </div>
-                <div class="mass-Con conv-dimen">
-                    <h2>Mass (Kilograms/Pounds)</h2>
-                    <p id="massConvert"> | </p>
-                </div>
-            </div>
-        </div>
-        
-    </body>`
+    darkBackground.style.backgroundColor= "#1F2937"
+    convertedBackground[0].style.backgroundColor = "#273549"
+    convertedBackground[0].style.boxShadow = "none"
+    convertedBackground[0].style.border = "none"
+    convertedBackground[1].style.backgroundColor = "#273549"
+    convertedBackground[1].style.boxShadow = "none"
+    convertedBackground[1].style.border = "none"
+    convertedBackground[2].style.backgroundColor = "#273549"
+    convertedBackground[2].style.boxShadow = "none"
+    convertedBackground[2].style.border = "none"
 })
 
-toggleLight.addEventListener("click", function(){
-    bodyContainer.innerHTML=`
-     <body id="bodyContainer">
-        <div class="container">
-            <div class="topSide">
-                <label class="switch">
-                    <input type="checkbox" id="toggle-dark">
-                    <span class="slider"></span>
-                </label>
-
-                <h1>Metric/Imperial Unit Conversion</h1>
-                <div><input class="converted" id="converted-value" type="number" placeholder="0" style="text-align: center;"></div>
-                <!-- <div class="converted" id="converted-value">0</div> -->
-                <button id="convert-btn" onclick="convertbtn()">Convert</button>
-            </div>
-
-            <div class="bottomSide">
-                <div class="length-Con conv-dimen">
-                    <h2>Length (Meter/Feet)</h2>
-                    <p id="lengthConvert"> | </p>
-
-                </div>
-                <div class="vol-Con conv-dimen">
-                    <h2>Volume (Liters/Gallons)</h2>
-                    <p id="volumeConvert"> | </p>
-                </div>
-                <div class="mass-Con conv-dimen">
-                    <h2>Mass (Kilograms/Pounds)</h2>
-                    <p id="massConvert"> | </p>
-                </div>
-            </div>
-        </div>
-        
-    </body>`
-})
