@@ -11,6 +11,9 @@ const lengthP = document.getElementById("lengthConvert")
 const toggleDark = document.getElementById("dark-mode-btn")
 const darkBackground = document.getElementById("darkBC")
 const convertedBackground = document.getElementsByClassName("conv-dimen")
+const switchToLightMode = document.getElementsByClassName("switchBtn")
+const switchToDarkMode = document.getElementById("light-mode-btn")
+
 // const toggleLight = document.getElementById("toggle-light")
 
 let numberEntered = document.getElementById("converted-value")
@@ -40,7 +43,14 @@ function convertbtn(){
 
 }
 
+
+// const heading = convertedBackground[0].querySelector("h2");
+// const paragraph = convertedBackground.querySelector("p");
+
+
 toggleDark.addEventListener("click", function(){
+
+
     darkBackground.style.backgroundColor= "#1F2937"
     convertedBackground[0].style.backgroundColor = "#273549"
     convertedBackground[0].style.boxShadow = "none"
@@ -51,5 +61,37 @@ toggleDark.addEventListener("click", function(){
     convertedBackground[2].style.backgroundColor = "#273549"
     convertedBackground[2].style.boxShadow = "none"
     convertedBackground[2].style.border = "none"
+
+    convertedBackground[0].querySelectorAll("p").forEach(p => {
+    p.style.color = "#B295FF";
+    })
+    convertedBackground[1].querySelectorAll("p").forEach(p => {
+        p.style.color = "#B295FF";
+    })
+    convertedBackground[2].querySelectorAll("p").forEach(p => {
+        p.style.color = "#B295FF";
+    })
+
+    convertedBackground[0].querySelectorAll("h2").forEach(h2 => {
+        h2.style.color = "#B295FF";
+    })
+    convertedBackground[1].querySelectorAll("h2").forEach(h2 => {
+        h2.style.color = "#B295FF";
+    })
+    convertedBackground[2].querySelectorAll("h2").forEach(h2 => {
+        h2.style.color = "#B295FF";
+    })
+
+    switchToLightMode.innerHTML = `
+        <button class="switchBtn" id="dark-mode-btn">
+        Light Mode
+        </button>
+    `;
+    
 })
 
+
+
+switchToDarkMode.addEventListener("click", function(){
+
+})
