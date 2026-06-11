@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body id="bodyContainer" >
-        <div class="container" id="darkBC">
+        <div class="container" id="container">
             <div class="topSide">
                 <button class="switchBtn" id="dark-mode-btn">Dark Mode</button>
                
@@ -20,22 +20,22 @@
                 <h1>Metric/Imperial Unit Conversion</h1>
                 <div><input class="converted" id="converted-value" type="number" placeholder="0" style="text-align: center;"></div>
                 
-                <button id="convert-btn" onclick="convertbtn()">Convert</button>
+                <button id="convert-btn"  onclick="convertbtn()">Convert</button>
             </div>
 
-            <div class="bottomSide" >
-                <div class="length-Con conv-dimen">
-                    <h2>Length (Meter/Feet)</h2>
-                    <p id="lengthConvert"> | </p>
+            <div class="bottomSide " >
+                <div class="length-Con conv-dimen" id="length-con">
+                    <h2 class="colorFirst">Length (Meter/Feet)</h2>
+                    <p id="lengthConvert" class="conColor"> | </p>
 
                 </div>
                 <div class="vol-Con conv-dimen">
-                    <h2>Volume (Liters/Gallons)</h2>
-                    <p id="volumeConvert"> | </p>
+                    <h2 class="colorFirst">Volume (Liters/Gallons)</h2>
+                    <p id="volumeConvert" class="conColor"> | </p>
                 </div>
                 <div class="mass-Con conv-dimen">
-                    <h2>Mass (Kilograms/Pounds)</h2>
-                    <p id="massConvert"> | </p>
+                    <h2 class="colorFirst">Mass (Kilograms/Pounds)</h2>
+                    <p id="massConvert" class="conColor"> | </p>
                 </div>
             </div>
         </div>
